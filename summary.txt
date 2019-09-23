@@ -1,0 +1,9 @@
+<html>
+<head>
+</head>
+<body>
+<ul><li>A computer that is on for 8hours a day uses almost 600kwh and emmits 175kg of CO<sub>2</sub> </li>
+<li>Desktop will used 5 to 10 W of electricity during sleep mode.</li>
+</ul>
+</body>
+</html>

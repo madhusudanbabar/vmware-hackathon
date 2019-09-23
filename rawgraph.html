@@ -1,0 +1,48 @@
+<html>
+  <head>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+    
+        ["Google Chrome", "Density", { role: "style" } ],
+        ["DevC++", 8.94, "#b87333"],
+        ["Atom", 10.49, "silver"],
+        ["Progisp", 19.30, "gold"],
+        ["Platinum", 21.45, "color: #e5e4e2"],
+        ["hi",15.7,"blue"]
+      ]);
+      
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "running applications over the period of `$uptime`",
+        width: 900,
+        height: 600,
+        //radius:10px,
+        bar: {groupWidth: "75%"},
+        legend: { position: "none" },//solid??
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+<div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
